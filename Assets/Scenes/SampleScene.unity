@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0028585412, g: 0.04557237, b: 0.22776657, a: 1}
+  m_IndirectSpecularColor: {r: 0.0027921945, g: 0.04559139, b: 0.22767255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -67,9 +67,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -2315,11 +2312,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -2335,6 +2336,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 10
   easeType: 6
@@ -2369,13 +2379,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 546655984}
   animationType: 4
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 90, y: 180, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -2384,11 +2399,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &546655986
 SpriteRenderer:
@@ -2962,11 +2980,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -2982,6 +3004,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0.2
   duration: 2
   easeType: 1
@@ -3016,13 +3047,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 682919408}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 200, y: 200, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -3031,11 +3067,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &682919410
 SpriteRenderer:
@@ -3747,11 +3786,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -3767,6 +3810,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 10
   easeType: 6
@@ -3801,13 +3853,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 774060589}
   animationType: 4
+  targetType: 11
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 90, y: 180, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -3816,11 +3873,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!114 &774060592
 MonoBehaviour:
@@ -3834,11 +3894,15 @@ MonoBehaviour:
   m_Script: {fileID: -333801856, guid: aa0b1eebb5db27a419fa4564bbe5c9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -3852,6 +3916,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
     m_PersistentCalls:
       m_Calls: []
   delay: 0
@@ -3882,6 +3952,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   loops: 1
+  id: 
   loopType: 0
   orientType: 0
   lookAtTransform: {fileID: 0}
@@ -3898,28 +3969,40 @@ MonoBehaviour:
   assignForwardAndUp: 0
   forwardDirection: {x: 0, y: 0, z: 1}
   upDirection: {x: 0, y: 1, z: 0}
-  wps: []
+  tweenRigidbody: 0
+  wps:
+  - {x: -364.71503, y: 250.96713, z: -334.73364}
   fullWps: []
   path:
+    wpLengths:
+    - 0
+    - 3.4531846
+    wps:
+    - {x: -365.4, y: 248.5968, z: -337.1496}
+    - {x: -364.71503, y: 250.96713, z: -334.73364}
     type: 0
     subdivisionsXSegment: 10
-    subdivisions: 0
-    wps: []
+    subdivisions: 20
     controlPoints: []
-    length: 0
-    wpLengths: []
-    isFinalized: 0
-    timesTable: []
+    length: 3.4531846
+    isFinalized: 1
+    timesTable:
+    - 0
+    - 1
     lengthsTable: []
+  inspectorMode: 0
   pathType: 0
   handlesType: 0
   livePreview: 1
   handlesDrawMode: 0
   perspectiveHandleSize: 0.5
   showIndexes: 1
+  showWpLength: 0
   pathColor: {r: 1, g: 1, b: 1, a: 0.5}
-  lastSrcPosition: {x: 0, y: 0, z: 0}
+  lastSrcPosition: {x: -365.4, y: 248.5968, z: -337.1496}
+  lastSrcRotation: {x: 0.76660514, y: -0, z: -0, w: 0.64211893}
   wpsDropdown: 0
+  dropToFloorOffset: 0
 --- !u!1 &776990965
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,11 +5954,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -5891,6 +5978,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 5
   easeType: 1
@@ -5925,13 +6021,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1004267705}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 25, y: 25, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -5940,11 +6041,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!1 &1032242704
 GameObject:
@@ -5991,11 +6095,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -6011,6 +6119,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 2
   easeType: 1
@@ -6045,13 +6162,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1032242705}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 200, y: 200, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -6060,11 +6182,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &1032242707
 SpriteRenderer:
@@ -7130,11 +7255,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -7150,6 +7279,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0.1
   duration: 2
   easeType: 1
@@ -7184,13 +7322,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1198260671}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 200, y: 200, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -7199,11 +7342,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &1198260673
 SpriteRenderer:
@@ -9487,11 +9633,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -9507,6 +9657,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 2
   easeType: 1
@@ -9541,13 +9700,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1663463571}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 200, y: 200, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -9556,11 +9720,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &1663463573
 SpriteRenderer:
@@ -10081,11 +10248,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -10101,6 +10272,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 2
   easeType: 1
@@ -10135,13 +10315,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1747064701}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 200, y: 200, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -10150,11 +10335,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &1747064703
 SpriteRenderer:
@@ -10885,11 +11073,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -10905,6 +11097,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 2
   easeType: 1
@@ -10939,13 +11140,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1936420929}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 200, y: 200, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -10954,11 +11160,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &1936420931
 SpriteRenderer:
@@ -11057,11 +11266,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
   hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -11077,6 +11290,15 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
   delay: 0
   duration: 2
   easeType: 1
@@ -11111,13 +11333,18 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1967192660}
   animationType: 5
+  targetType: 0
+  forcedTargetType: 0
   autoPlay: 1
+  useTargetAsV3: 0
   endValueFloat: 0
   endValueV3: {x: 200, y: 200, z: 0}
+  endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
   endValueRect:
@@ -11126,11 +11353,14 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!212 &1967192662
 SpriteRenderer:
@@ -11329,7 +11559,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f7006c4a8c30d2c479c1bb2366b26e35, type: 3}
-      propertyPath: m_Materials.Array.data[1]
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: fcbc2adf4904f8746a6eba954f11e484, type: 2}
     m_RemovedComponents: []
