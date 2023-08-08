@@ -1,4 +1,4 @@
-// Author: Daniele Giardini - http://www.demigiant.com
+﻿// Author: Daniele Giardini - http://www.demigiant.com
 // Created: 2015/03/12 15:55
 
 using System;
@@ -8,7 +8,7 @@ using UnityEngine;
 #if true // UI_MARKER
 using UnityEngine.UI;
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
 using TMPro;
 #endif
 
@@ -304,7 +304,7 @@ namespace DG.Tweening
                 break;
             case AnimationType.Scale:
                 switch (targetType) {
-#if true // TK2D_MARKER
+#if false // TK2D_MARKER
                 case TargetType.tk2dTextMesh:
                     tween = ((tk2dTextMesh)target).DOScale(optionalBool0 ? new Vector3(endValueFloat, endValueFloat, endValueFloat) : endValueV3, duration);
                     break;
@@ -347,7 +347,7 @@ namespace DG.Tweening
                     tween = ((Text)target).DOColor(endValueColor, duration);
                     break;
 #endif
-#if true // TK2D_MARKER
+#if false // TK2D_MARKER
                 case TargetType.tk2dTextMesh:
                     tween = ((tk2dTextMesh)target).DOColor(endValueColor, duration);
                     break;
@@ -355,7 +355,7 @@ namespace DG.Tweening
                     tween = ((tk2dBaseSprite)target).DOColor(endValueColor, duration);
                     break;
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
                 case TargetType.TextMeshProUGUI:
                     tween = ((TextMeshProUGUI)target).DOColor(endValueColor, duration);
                     break;
@@ -390,7 +390,7 @@ namespace DG.Tweening
                     tween = ((CanvasGroup)target).DOFade(endValueFloat, duration);
                     break;
 #endif
-#if true // TK2D_MARKER
+#if false // TK2D_MARKER
                 case TargetType.tk2dTextMesh:
                     tween = ((tk2dTextMesh)target).DOFade(endValueFloat, duration);
                     break;
@@ -398,7 +398,7 @@ namespace DG.Tweening
                     tween = ((tk2dBaseSprite)target).DOFade(endValueFloat, duration);
                     break;
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
                 case TargetType.TextMeshProUGUI:
                     tween = ((TextMeshProUGUI)target).DOFade(endValueFloat, duration);
                     break;
@@ -416,14 +416,14 @@ namespace DG.Tweening
                     break;
                 }
 #endif
-#if true // TK2D_MARKER
+#if false // TK2D_MARKER
                 switch (targetType) {
                 case TargetType.tk2dTextMesh:
                     tween = ((tk2dTextMesh)target).DOText(endValueString, duration, optionalBool0, optionalScrambleMode, optionalString);
                     break;
                 }
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
                 switch (targetType) {
                 case TargetType.TextMeshProUGUI:
                     tween = ((TextMeshProUGUI)target).DOText(endValueString, duration, optionalBool0, optionalScrambleMode, optionalString);

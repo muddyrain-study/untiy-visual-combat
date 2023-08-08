@@ -1,4 +1,4 @@
-// Author: Daniele Giardini - http://www.demigiant.com
+﻿// Author: Daniele Giardini - http://www.demigiant.com
 // Created: 2015/03/12 16:03
 
 using System;
@@ -15,7 +15,7 @@ using DOTweenSettings = DG.Tweening.Core.DOTweenSettings;
 #if true // UI_MARKER
 using UnityEngine.UI;
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
     using TMPro;
 #endif
 
@@ -112,7 +112,7 @@ namespace DG.DOTweenEditor
 #endif
         };
 
-#if true // TK2D_MARKER
+#if false // TK2D_MARKER
         static readonly Dictionary<DOTweenAnimation.AnimationType, Type[]> _Tk2dAnimationTypeToComponent = new Dictionary<DOTweenAnimation.AnimationType, Type[]>() {
             { DOTweenAnimation.AnimationType.Scale, new[] { typeof(tk2dBaseSprite), typeof(tk2dTextMesh) } },
             { DOTweenAnimation.AnimationType.Color, new[] { typeof(tk2dBaseSprite), typeof(tk2dTextMesh) } },
@@ -120,7 +120,7 @@ namespace DG.DOTweenEditor
             { DOTweenAnimation.AnimationType.Text, new[] { typeof(tk2dTextMesh) } }
         };
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
         static readonly Dictionary<DOTweenAnimation.AnimationType, Type[]> _TMPAnimationTypeToComponent = new Dictionary<DOTweenAnimation.AnimationType, Type[]>() {
             { DOTweenAnimation.AnimationType.Color, new[] { typeof(TextMeshPro), typeof(TextMeshProUGUI) } },
             { DOTweenAnimation.AnimationType.Fade, new[] { typeof(TextMeshPro), typeof(TextMeshProUGUI) } },
@@ -138,10 +138,10 @@ namespace DG.DOTweenEditor
             "FillAmount",
             "Text",
 #endif
-#if true // TK2D_MARKER
+#if false // TK2D_MARKER
             "Text",
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
             "Text",
 #endif
 #if true // UI_MARKER
@@ -601,7 +601,7 @@ namespace DG.DOTweenEditor
 
             Component srcTarget;
             // First check for external plugins
-#if true // TK2D_MARKER
+#if false // TK2D_MARKER
             if (_Tk2dAnimationTypeToComponent.ContainsKey(_src.animationType)) {
                 foreach (Type t in _Tk2dAnimationTypeToComponent[_src.animationType]) {
                     srcTarget = targetGO.GetComponent(t);
@@ -613,7 +613,7 @@ namespace DG.DOTweenEditor
                 }
             }
 #endif
-#if true // TEXTMESHPRO_MARKER
+#if false // TEXTMESHPRO_MARKER
             if (_TMPAnimationTypeToComponent.ContainsKey(_src.animationType)) {
                 foreach (Type t in _TMPAnimationTypeToComponent[_src.animationType]) {
                     srcTarget = targetGO.GetComponent(t);
